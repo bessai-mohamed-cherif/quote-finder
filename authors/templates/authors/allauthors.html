@@ -6,5 +6,25 @@
 </head>
 <body>
     <h1>Authors</h1>
+    <table>
+      <tr>
+        <th>  </th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Date of Birth</th>
+        <th>Date of Death</th>
+      </tr>
+         {% for author in authors %}
+          <tr>
+              <td><img src="{{ author.image.url }}" class="img-fluid mb-2" height="50" width="50"></td>
+            <td>{{ author.name }} </td>
+            <td>{{ author.description }} </td>
+            <td>{{ author.birth_date }} </td>
+            <td>{{ author.death_date }} </td>
+
+          </tr>
+        {% endfor %}
+
+</table>
 </body>
 </html>
