@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def homepage(request):
     return render(request,"search/homepage.html")
+
+def searchresult(request):
+    return render(request, "search/searchresult.html")
