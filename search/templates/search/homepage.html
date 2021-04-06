@@ -6,13 +6,15 @@
     <link rel="stylesheet" href="static/search/homepage.css">
 </head>
 <body>
-    <div class="wrap">
-   <div class="search">
-      <input type="text" class="searchTerm" placeholder="What are you looking for?">
-      <button type="submit" class="searchButton">
-        <i class="fa fa-search"></i>
-     </button>
-   </div>
-</div>
+    <form method='GET' action="{% url 'searchresult' %}">
+        <div class="wrap">
+           <div class="search">
+              <input type="text" class="searchTerm" name="q" placeholder="What are you looking for?">
+              <button type="submit" class="searchButton">
+                <i class="fa fa-search"></i>
+             </button>
+           </div>
+        </div>
+    </form>
 </body>
 </html>
