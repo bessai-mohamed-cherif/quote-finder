@@ -6,6 +6,9 @@
 </head>
 <body>
 <table>
+    {% if not results %}
+        {{ error }}
+    {% else %}
   <tr>
     <th>Quote</th>
     <th>Author</th>
@@ -14,15 +17,14 @@
   </tr>
      {% for result in results %}
       <tr>
-        <td>{{ result.phrase }}</td>
-        <td>{{ result.author }}</td>
-        <td>{{ result.source }}</td>
-        <td>{{ result.topics }}</td>
+        <td>{{ result.phrase }} </td>
+        <td>{{ result.author }} </td>
+        <td>{{ result.source }} </td>
+        <td>{{ result.topics }} </td>
       </tr>
     {% endfor %}
+    {% endif %}
 </table>
-
-
 
 </body>
 </html>

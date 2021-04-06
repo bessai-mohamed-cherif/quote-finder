@@ -6,10 +6,18 @@
     <link rel="stylesheet" href="static/search/homepage.css">
 </head>
 <body>
+
+    <div class="topnav">
+      <a class="active" href="{% url 'homepage' %}">Home</a>
+      <a href="{% url 'allauthors' %}">Authors</a>
+      <a href="#topics">Topics</a>
+      <a href="#about">About</a>
+    </div>
+
     <form method='GET' action="{% url 'searchresult' %}">
         <div class="wrap">
            <div class="search">
-              <input type="text" class="searchTerm" name="q" placeholder="What are you looking for?">
+              <input type="text" class="searchTerm" name="q" placeholder="Looking for a Quote?">
               <button type="submit" class="searchButton">
                 <i class="fa fa-search"></i>
              </button>

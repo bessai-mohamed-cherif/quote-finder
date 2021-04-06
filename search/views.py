@@ -9,4 +9,4 @@ def homepage(request):
 def searchresult(request):
     query = request.GET.get('q')
     results = Quotes.objects.filter(phrase__contains=query)
-    return render(request, "search/searchresult.html", {'results': results})
+    return render(request, "search/searchresult.html", {'results': results, 'error':"there is no quotes."})

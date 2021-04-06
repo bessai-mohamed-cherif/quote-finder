@@ -15,10 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from search import views
+from search.views import homepage,searchresult
+from authors.views import allauthors
+from django.conf.urls.static import static
+from django.conf import settings
+
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.homepage, name="homepage"),
-    path('search/', views.searchresult, name="searchresult"),
+    path('', homepage, name="homepage"),
+    path('search/', searchresult, name="searchresult"),
+    path('authors/', allauthors, name="allauthors"),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
