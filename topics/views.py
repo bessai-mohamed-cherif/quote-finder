@@ -7,4 +7,4 @@ def alltopics(request):
     return render(request,"topics/alltopics.html",{"topics":topics})
 
 def detail(request, topic):
-    return render(request, "topic/detail.html", {"topic": topic})
+    return render(request, "topics/detail.html", {"topic": topic})
