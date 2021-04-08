@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Topics</title>
+</head>
+<body>
+    {% for topic in topics %}
+    <a href="{% url 'topics:detail' topic %}">topic</a>
+    {% endfor %}
+</body>
+</html>
