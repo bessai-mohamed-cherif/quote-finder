@@ -5,6 +5,23 @@
     <title>Topic</title>
 </head>
 <body>
+    {{ topic }}
+    <table>
 
+      <tr>
+        <th>Quote</th>
+        <th>Author</th>
+        <th>Source</th>
+        <th>Topics</th>
+      </tr>
+         {% for result in results %}
+          <tr>
+            <td>{{ result.phrase }} </td>
+            <td>{{ result.author }} </td>
+            <td>{{ result.source }} </td>
+            <td>{{ result.topics }} </td>
+            </tr>
+        {% endfor %}
+    </table>
 </body>
 </html>
