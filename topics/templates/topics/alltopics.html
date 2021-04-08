@@ -6,7 +6,7 @@
 </head>
 <body>
     {% for topic in topics %}
-    <a href="{% url 'topics:detail' topic %}">topic</a>
+    <a href="{% url 'topics:detail' topic %}">{{ topic }}</a>
     {% endfor %}
 </body>
 </html>
