@@ -7,6 +7,9 @@ def allauthors(request):
     authorstable = {}
     for author in authors:
         authorstable[author.name] = Authors.objects.filter(name=author.name).count()
-
-
     return render(request,"authors/allauthors.html",{"authorstable":authorstable})
+
+def detailauthor(request, key):
+    author = Authors.objects.filter(name=key)
+    print(author)
+    return render(request, "authors/detailauthor.html", {'author': author})

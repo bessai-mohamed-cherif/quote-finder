@@ -26,7 +26,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', homepage, name="homepage"),
     path('search/', searchresult, name="searchresult"),
-    path('authors/', allauthors, name="allauthors"),
+    path('authors/', include('authors.urls')),
     path('topics/', include('topics.urls')),
 ]
 

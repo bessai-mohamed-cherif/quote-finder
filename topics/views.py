@@ -9,4 +9,5 @@ def alltopics(request):
 
 def detail(request, topic):
     results = Quotes.objects.filter(topics__contains=topic)
+    print(results)
     return render(request, "topics/detail.html", {"results": results})

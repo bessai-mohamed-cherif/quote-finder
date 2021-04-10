@@ -8,14 +8,13 @@
     <h1>Authors</h1>
     <table>
       <tr>
-        <th>  </th>
         <th>Name</th>
         <th>Number of quotes</th>
       </tr>
         {% for key,value in authorstable.items %}
           <tr>
 
-            <td>{{ key }} </td>
+            <td><a href="{% url 'authors:detailauthor' key %}">{{ key }}</a> </td>
             <td>{{ value }} </td>
 
           </tr>
