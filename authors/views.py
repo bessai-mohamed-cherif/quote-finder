@@ -4,4 +4,7 @@ from .models import Authors
 # Create your views here.
 def allauthors(request):
     authors = Authors.objects.all().order_by('-name')
-    return render(request,"authors/allauthors.html",{"authors":authors})
+    for author in authors:
+        authorstable = {author.name:Authors.objects.filter(name=author.name).count()}
+
+    return render(request,"authors/allauthors.html",{"authorstable":authorstable})
