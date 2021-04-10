@@ -10,6 +10,6 @@ def allauthors(request):
     return render(request,"authors/allauthors.html",{"authorstable":authorstable})
 
 def detailauthor(request, key):
-    author = Authors.objects.filter(name=key)
-    print(author)
-    return render(request, "authors/detailauthor.html", {'author': author})
+    authors = Authors.objects.filter(name=key)
+    print(authors)
+    return render(request, "authors/detailauthor.html", {'authors': authors})
