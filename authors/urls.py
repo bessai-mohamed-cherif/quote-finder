@@ -7,4 +7,5 @@ urlpatterns = [
 
     path('', views.allauthors, name="allauthors"),
     path('<str:key>/', views.detailauthor, name="detailauthor"),
+    path('<str:name>/allquotes', views.allauthorquotes, name="allauthorquotes"),
 ]

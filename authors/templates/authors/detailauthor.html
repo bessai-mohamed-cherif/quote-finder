@@ -11,6 +11,10 @@
         <p>Description : {{ author.description }} </p>
         <p>Date of Birth : {{ author.birth_date }} </p>
         <p>Date of Death : {{ author.death_date }} </p>
+        <form action="{% url 'authors:allauthorquotes' author.name %}">
+        <input type="submit" value="All Quotes" />
+        </form>
     {% endfor %}
+
 </body>
 </html>

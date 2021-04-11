@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Quotes</title>
+</head>
+<body>
+    <table>
+  <tr>
+    <th>Quote</th>
+    <th>Author</th>
+    <th>Source</th>
+    <th>Topics</th>
+  </tr>
+     {% for quote in quotes %}
+      <tr>
+        <td>{{ quote.phrase }} </td>
+        <td>{{ quote.author }} </td>
+        <td>{{ quote.source }} </td>
+        <td>{{ quote.topics }} </td>
+      </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

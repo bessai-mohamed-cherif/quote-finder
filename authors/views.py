@@ -13,3 +13,7 @@ def allauthors(request):
 def detailauthor(request, key):
     authors = Authors.objects.filter(name=key)
     return render(request, "authors/detailauthor.html", {'authors': authors})
+
+def allauthorquotes(request, name):
+    quotes = Quotes.objects.filter(author=name)
+    return render(request, "authors/allauthorquotes.html", {'quotes': quotes})
