@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'search',
     'authors',
     'topics',
+    'about',
 ]
 
 MIDDLEWARE = [

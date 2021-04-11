@@ -11,7 +11,7 @@
       <a class="active" href="{% url 'homepage' %}">Home</a>
       <a href="{% url 'authors:allauthors' %}">Authors</a>
       <a href="{% url 'topics:alltopics' %}">Topics</a>
-      <a href="#about">About</a>
+      <a href="{% url 'about' %}">About</a>
     </div>
 
     <form method='GET' action="{% url 'searchresult' %}">

@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from search.views import homepage,searchresult
+from about.views import about
 from authors.views import allauthors
 from django.conf.urls.static import static
 from django.conf import settings
@@ -28,6 +29,7 @@ urlpatterns = [
     path('search/', searchresult, name="searchresult"),
     path('authors/', include('authors.urls')),
     path('topics/', include('topics.urls')),
+    path('about/', about, name="about"),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
