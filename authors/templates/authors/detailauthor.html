@@ -5,12 +5,12 @@
     <title>Author</title>
 </head>
 <body>
-{% for author in authors %}
+    {% for author in authors %}
         <img src="{{ author.image.url }}" class="img-fluid mb-2" height="100" width="100">
-          <p> Name : {{ author.name }}</p>
-          <p>Description : {{ author.description }} </p>
-          <p>Date of Birth : {{ author.birth_date }} </p>
-          <p>Date of Death : {{ author.death_date }}</p>
-{% endfor %}
+        <p>Name : {{ author.name }} </p>
+        <p>Description : {{ author.description }} </p>
+        <p>Date of Birth : {{ author.birth_date }} </p>
+        <p>Date of Death : {{ author.death_date }} </p>
+    {% endfor %}
 </body>
 </html>
